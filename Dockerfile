@@ -1,8 +1,8 @@
 # Use an official Node runtime as base image
-FROM node:18
+FROM ubuntu:22.04
 
 # Install necessary tools
-RUN apt-get update && apt-get install -y curl ca-certificates
+RUN apt-get update && apt-get install -y curl ca-certificates sudo wget
 
 # Install NVM (Node Version Manager) and Node 18
 RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash \
